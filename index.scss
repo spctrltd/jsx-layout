@@ -1,0 +1,130 @@
+// COLOURS
+$COLOUR_WHITE: #ffffff;
+$COLOUR_BLACK: #000000;
+$COLOUR_LIGHT_GREY: #cccccc;
+
+// FONTS
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+
+// Font Variables
+$FONT_FAMILY: Roboto, sans;
+$FONT_BOLD: bold;
+
+// GLOBAL
+*,
+:before,
+:after {
+  box-sizing: border-box;
+}
+
+.ICON {
+  display: flex;
+  background-color: $COLOUR_WHITE;
+  border-radius: 25px;
+  width: 50px;
+  height: 50px;
+  padding: 3px;
+  svg {
+      fill: $COLOUR_BLACK;
+  }
+}
+
+// LAYOUT
+@mixin LAYOUT {
+  display: flex;
+  flex: 1 0 auto;
+  min-height: 100%;
+  flex-direction: column;
+}
+
+// HEADER
+
+// FOOTER
+
+// THEMES
+// -- SPCTR
+.LAYOUT {
+  @include LAYOUT;
+  font-family: $FONT_FAMILY;
+  overflow-x: hidden;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  @media (min-width: 900px) {
+    margin: 0.5rem;
+    padding-top: 1rem;
+  }
+}
+.HEADER {
+  background-color: $COLOUR_BLACK;
+  color: $COLOUR_WHITE;
+  @media (min-width: 900px) {
+    border-radius: 50rem;
+    padding: 0 0.75rem;
+    margin: 0 auto;
+    width: 75%;
+    z-index: 2;
+    position: relative;
+  }
+}
+.NAV-HORIZONTAL {
+  align-items: center;
+  display: flex;
+  font-size: 1rem;
+  padding: 0.5rem;
+  z-index: 100;
+  position: relative;
+  justify-content: space-between;
+  @media (min-width: 900px) {
+    padding: 0.5rem 0;
+  }
+  ul {
+    flex-grow: 1;
+    flex-basis: 100%;
+    align-items: center;
+    gap: 0.5rem;
+    list-style: none;
+    display: flex;
+    padding: 0.5rem 1rem;
+    margin: auto;
+    @media (min-width: 990px) {
+      flex-basis: auto;
+      flex-direction: row;
+    }
+  }
+}
+.NAV-HORIZONTAL-LINK {
+  background-color: transparent;
+  color: $COLOUR_WHITE;
+  border-radius: 50rem;
+  transition: all 0.15s linear;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  outline: none;
+  border: 0;
+  &:hover {
+    color: $COLOUR_BLACK;
+    background-color: $COLOUR_WHITE;
+  }
+}
+.NAV-HORIZONTAL-HEADER {
+}
+.NAV-HORIZONTAL-FOOTER {
+}
+.MAIN {
+  background-color: $COLOUR_LIGHT_GREY;
+  @media (min-width: 900px) {
+    padding-bottom: 0;
+    padding-top: 14rem;
+    margin-top: -10rem;
+    position: relative;
+  }
+}
+.FOOTER {
+  background-color: $COLOUR_WHITE;
+  color: $COLOUR_BLACK;
+  padding: 6rem 0 2.5rem 0;
+  @media (min-width: 900px) {
+  }
+}
