@@ -2,8 +2,6 @@ import Header from './header'
 import Footer from './footer'
 import Main from './main'
 
-import './index.scss'
-
 export default props => {
   const {children, header, footer, main, ...remainingProps} = props
   const {props: mainProps} = main
